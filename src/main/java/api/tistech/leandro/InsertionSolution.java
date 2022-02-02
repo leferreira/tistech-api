@@ -1,5 +1,7 @@
 package api.tistech.leandro;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
@@ -9,17 +11,20 @@ import java.util.Arrays;
  */
 public class InsertionSolution {
 
+
 	public static void main(String[] args) throws Exception {
-		int numero, indice, t, j;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int T, N, t, j;
 		int[] nums;
-		numero = 10;
-		indice = 5;
-		for (t = 0; t < numero; t++) {
-			nums = new int[indice];
-			String[] array = "10 2 3 40 51 5 7 9 1".split(" ");
-			for (j = 0; j < indice; j++)
-				nums[j] = Integer.parseInt(array[j]);
-			System.out.print(Long.toString(sort_and_count(nums, 0, indice - 1)) + "\n");
+		T = Integer.parseInt(br.readLine());
+		for (t = 0; t < T; t++) {
+			N = Integer.parseInt(br.readLine());
+			nums = new int[N];
+			String[] strs = br.readLine().split(" ");
+			for (j = 0; j < N; j++)
+				nums[j] = Integer.parseInt(strs[j]);
+			System.out.print(Long.toString(sort_and_count(nums, 0, N - 1)) + "\n");
 
 		}
 

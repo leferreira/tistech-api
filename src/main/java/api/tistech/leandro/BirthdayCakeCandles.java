@@ -2,6 +2,11 @@ package api.tistech.leandro;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Leandro
+ *
+ */
 public class BirthdayCakeCandles {
 
 	public static void main(String[] args) {
